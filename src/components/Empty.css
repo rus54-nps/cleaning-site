@@ -1,0 +1,332 @@
+.empty {
+    grid-area: e;
+    background-color: #d6d4d1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    position: relative;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Высота блока с фоном */
+    background-image: url('https://www.klining-master.ru/upload/iblock/38a/38a1362890af788ea9f8655231834460.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Затемнение */
+    z-index: 0; /* Наложение будет под текстом */
+}
+
+        /*БЛОК TOП*/
+.hero-text-top {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between; /* Распределяем элементы по ширине */
+    width: 70%;
+    z-index: 1;
+    margin: 0 auto;
+}
+.left-section,
+.center-section,
+.right-section {
+    display: flex;
+    align-items: center;
+}
+.left-section .logo {
+    width: 30px;
+    margin-right: 20px;
+}
+.company-name {
+    font-size: 20px;
+}
+.center-section {
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+}
+.phone-number {
+    margin: 0 15px;
+}
+.right-section {
+    text-align: right;
+}
+.email {
+    font-size: 18px;
+}
+
+/*БЛОК ЦЕНТР*/
+.hero-text-center {
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: right;
+    z-index: 1;
+    max-width: 600px;
+    word-wrap: break-word;
+}
+
+.text-zag {
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    display: block; /* Сделать элемент блочным, чтобы он занимал отдельную строку */
+}
+.text-podzag {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-top: 10px;
+}
+
+/*БЛОК СЕРВИС(услуги)*/
+.service-block {
+    width: 1120px;
+    height: auto;
+    margin-top: -40px;
+    padding: 40px;
+    background-color: #dcdad7;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.service-item-zt {
+    color: #131212;
+}
+.service-item-text {
+    color:#3f3c3c;
+}
+
+.service-items {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+}
+
+.service-item {
+    width: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.service-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.service-item h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.service-item ul {
+    list-style: none;
+    padding: 0;
+}
+.service-item ul li {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.content-block {
+    margin: 40px 0;
+    font-size: 24px;
+}
+
+/* ABOUT БЛОК(о компании) */
+.about-block {
+    width: 80%;
+    max-width: 1200px;
+    margin: 60px auto;
+    color: #131212;
+    text-align: left;
+}
+.about-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.about-description {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.about-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.about-left,
+.about-right {
+    flex: 1;
+    min-width: 300px;
+}
+.column-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.column-text {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+.about-list {
+    font-size: 18px;
+    list-style-type: disc;
+    padding-left: 25px;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+.about-right {
+    padding-left: 5px;
+}
+
+/*COMPLETED БЛОК(картинки заказов)*/
+.completed-orders {
+    width: 80%;
+    max-width: 1200px;
+    margin: 60px auto;
+    text-align: left;
+    color: #131212;
+}
+
+.completed-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.completed-images {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.completed-image {
+    width: 270px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px; /* Скругляем углы изображений */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Добавляем тень для выделения */
+}
+
+/*RIVIEW БЛОК(отзывы)*/
+/* Блок с отзывами */
+.reviews-block {
+    width: 80%;
+    max-width: 1200px;
+    margin: 60px auto;
+    color: #131212;
+    text-align: bold;
+}
+
+.reviews-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.review-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #222222;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    max-width: 1200px;
+    height: 170px;
+    overflow: hidden;
+}
+.review {
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 18px;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+.review-nav-button {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    padding: 10px;
+}
+.left-button {
+    left: 10px;
+}
+.right-button {
+    right: 10px;
+}
+.review {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+    font-size: 22px;
+}
+.review-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.review-service {
+    font-size: 24px;
+    font-weight: normal;
+    margin-left: 10px;
+}
+.review-rating {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.stars {
+    color: gold;
+    margin-left: 5px;
+}
+

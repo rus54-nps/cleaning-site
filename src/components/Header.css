@@ -1,0 +1,13 @@
+.header {
+  grid-area: h;
+  background-color: rgb(170, 147, 15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header img {
+  width: 20px;
+}
+.item {
+    color: white;
+}
